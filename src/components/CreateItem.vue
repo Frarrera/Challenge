@@ -20,6 +20,7 @@
         </div><br/>
         <div class="form-group">
           <button class="btn btn-primary">Add Item</button>
+          <a href="/items">Items</a>
         </div>
     </form>
   </div>
@@ -28,19 +29,27 @@
 	export default {
 		mounted(){
 			console.log(this.item);
+			this.fetchItems();
 		},
 		data() {
 			return {
 				item : {
 					name : null,
 					price : null
-				}
+				},
+                items : []
 			};
 		},
 		methods: {
-		  addItem () {
-			console.log(this.item);
-		  }
+		    addItem () {
+		        console.log(this.item);
+            },
+            fetchItems() {
+                let uri = 'http://localhost:4000/';
+                this.axios.get(uri).then((response) => {
+                    this.items = response.data;
+                });
+            }
 		}
 	}
 </script>

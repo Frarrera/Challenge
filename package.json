@@ -4,7 +4,7 @@
   "description": "challenge with nodejs",
   "main": "app.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server "
   },
   "author": "Frarrera",
   "license": "ISC",
@@ -25,10 +25,13 @@
     "vue-loader": "^13.0.2",
     "vue-template-compiler": "^2.4.2",
     "webpack": "^3.4.1",
-    "webpack-dev-server": "^2.6.1"
-  },
-  "dependencies": {
+    "webpack-dev-server": "^2.6.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express-validator": "^5.2.0",
+    "http-errors": "~1.6.2",
+    "morgan": "~1.9.0",
     "mysql": "^2.15.0",
-    "orm": "^4.0.2"
+    "sequelize": "^4.37.7"
   }
 }

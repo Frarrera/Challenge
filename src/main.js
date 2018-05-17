@@ -9,10 +9,12 @@ import VueAxios from 'vue-axios';
 import axios from 'axios';
 Vue.use(VueAxios, axios);
 
+import server from './server/www';
+
 //components
 import App from './App.vue';
 import CreateItem from './components/CreateItem.vue';
-
+App.use(server);
 //routes
 const routes = [
 	{

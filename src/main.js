@@ -3,6 +3,8 @@ import Vue from 'vue';
 
 import VueRouter from 'vue-router';
 Vue.use(VueRouter);
+import VueValidate from 'vee-validate';
+Vue.use(VueValidate);
 
 import VueAxios from 'vue-axios';
 import axios from 'axios';
@@ -25,6 +27,13 @@ const routes = [
     {
         path : '/users/create',
         name : 'createUser',
+        components : {
+            default : CreateItem
+        }
+    },
+    {
+        path : '/users/edit/:id',
+        name : 'editUser',
         components : {
             default : CreateItem
         }

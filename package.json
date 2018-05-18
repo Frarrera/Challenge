@@ -5,7 +5,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "start-server": "node ./src/server/www.js",
-    "dev" : "npm run start && npm run start-server"
+    "dev": "npm run start && npm run start-server"
   },
   "author": "Frarrera",
   "license": "ISC",
@@ -34,6 +34,8 @@
     "morgan": "~1.9.0",
     "mysql": "^2.15.0",
     "sequelize": "^4.37.7",
-    "mysql2": "^1.5.3"
+    "mysql2": "^1.5.3",
+    "sweetalert": "^2.1.0",
+    "vee-validate": "^2.0.9"
   }
 }

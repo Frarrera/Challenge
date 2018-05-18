@@ -18,13 +18,17 @@ const routes = [
 	{
         path : '/',
 		name : 'home',
-		component : ShowItem
+		components : {
+            default : ShowItem
+        }
 	},
     {
-        path : 'users',
+        path : '/users/create',
         name : 'createUser',
-        component : CreateItem
+        components : {
+            default : CreateItem
+        }
     }
 ];
 const router = new VueRouter({ mode: 'history', routes : routes});
-new Vue(Vue.util.extend({ router },App)).$mount('#app');
+const theApp = new Vue(Vue.util.extend({ router },App)).$mount('#app');

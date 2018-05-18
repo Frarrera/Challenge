@@ -4,7 +4,8 @@
   "description": "challenge with nodejs",
   "scripts": {
     "start": "webpack-dev-server",
-    "start-server": "node ./src/server/www.js"
+    "start-server": "node ./src/server/www.js",
+    "dev" : "npm run start && npm run start-server"
   },
   "author": "Frarrera",
   "license": "ISC",

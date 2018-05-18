@@ -4,7 +4,7 @@
   "description": "challenge with nodejs",
   "main": "app.js",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "node ./src/server/www.js |webpack-dev-server"
   },
   "author": "Frarrera",
   "license": "ISC",

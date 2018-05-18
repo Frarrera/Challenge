@@ -16,13 +16,8 @@ import CreateItem from './components/CreateItem.vue';
 //routes
 const routes = [
 	{
-		name : 'index',
-		path : '/',
-		component : ShowItem
-	},
-	{
+        path : '/home',
 		name : 'createUser',
-		path : '/users/create',
 		component : CreateItem
 	}
 ];

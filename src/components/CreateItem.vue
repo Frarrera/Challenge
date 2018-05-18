@@ -26,10 +26,11 @@
   </div>
 </template>
 <script>
+    //import server from '../server/www.js';
 	export default {
 		mounted(){
 			console.log(this.item);
-			this.fetchItems();
+			//this.fetchItems();
 		},
 		data() {
 			return {
@@ -45,7 +46,7 @@
 		        console.log(this.item);
             },
             fetchItems() {
-                let uri = 'http://localhost:4000/';
+                let uri = 'http://localhost:4000/users';
                 this.axios.get(uri).then((response) => {
                     this.items = response.data;
                 });

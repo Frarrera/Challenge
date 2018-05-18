@@ -6,7 +6,7 @@ let User = sequelize.define( 'profile',{
     business_name : DataTypes.STRING,
     phone : DataTypes.STRING,
     email : DataTypes.STRING,
-    created_date : DataTypes.DATE
+    created_at : DataTypes.DATE
 });
 User.showAll = (success,error) => {
     User.findAll({raw: true}).then(success).error(error);

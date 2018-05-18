@@ -1,5 +1,4 @@
 // main.js
-
 import Vue from 'vue';
 
 import VueRouter from 'vue-router';
@@ -9,17 +8,21 @@ import VueAxios from 'vue-axios';
 import axios from 'axios';
 Vue.use(VueAxios, axios);
 
-import server from './server/www';
-
 //components
 import App from './App.vue';
+import ShowItem from './components/ShowItems.vue';
 import CreateItem from './components/CreateItem.vue';
-App.use(server);
+
 //routes
 const routes = [
 	{
-		name : 'createItem',
+		name : 'index',
 		path : '/',
+		component : ShowItem
+	},
+	{
+		name : 'createUser',
+		path : '/users/create',
 		component : CreateItem
 	}
 ];

@@ -44,7 +44,7 @@ router.route('/')
     });
 router.route('/create')
     .get((request,response)=>{
-        response.render('form');
+        response.render('yolo');
     })
 
 module.exports = router;

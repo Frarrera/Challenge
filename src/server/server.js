@@ -9,6 +9,17 @@ var usersRouter = require('./../../expressRoutes/users');
 
 var app = express();
 
+// Add headers
+app.use(function (req, res, next) {
+    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000');
+    // Request methods you wish to allow
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    // Request headers you wish to allow
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    // Pass to next layer of middleware
+    next();
+});
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -19,21 +30,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// First you need to create a connection to the db
-/*let con = require('./config/dbconnection');
-con.query('SELECT * FROM profile', (err,rows) => {
-    if(err) throw err;
-    console.log('Data received from Db:\n');
-    console.log(rows);
-});
-
-con.end((err) => {
-    // The connection is terminated gracefully
-    // Ensures all previously enqueued queries are still
-    // before sending a COM_QUIT packet to the MySQL server.
-});*/
-
-app.use('/', indexRouter);
+//app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
@@ -49,6 +46,7 @@ app.use(function(err, req, res, next) {
 
     // render the error page
     res.status(err.status || 500);
+    router.redirect = "/home"
     res.render('error');
 });
 

@@ -1,11 +1,23 @@
 <template>
     <section>
         <h3>Usuarios</h3>
-        <div >
-            <p v-for="user in users">
-                {{user.principal_name}}
-            </p>
-            <a href="/users/create">Agregar nuevo</a>
+        <div>
+            <table class="table">
+                <tbody>
+                <tr v-for="user in users">
+                    <td>{{ user.principal_name }}</td>
+                    <td>{{ user.rfc }}</td>
+                    <td>{{ user.phone }}</td>
+                    <td>
+                        <div class="btn-group">
+                            <button class="btn btn-sm btn-default">edit</button>
+                            <button class="btn btn-sm btn-default">delete</button>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <a class="btn btn-sm btn-primary" href="/users/create">Agregar nuevo</a>
         </div>
     </section>
 </template>
@@ -32,5 +44,7 @@
 </script>
 
 <style scoped>
-
+    table td {
+        line-height: 20px;
+    }
 </style>

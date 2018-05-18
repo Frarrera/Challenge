@@ -14,7 +14,7 @@
     export default {
         name: "ShowItems",
         created(){
-            const uri = 'http://localhost:4000/';
+            const uri = 'http://localhost:4000/api/v1/users';
             const self = this;
             this.axios.get(uri).then((response)=>{
                 console.log(response)

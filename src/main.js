@@ -16,10 +16,15 @@ import CreateItem from './components/CreateItem.vue';
 //routes
 const routes = [
 	{
-        path : '/home',
-		name : 'createUser',
-		component : CreateItem
-	}
+        path : '/',
+		name : 'home',
+		component : ShowItem
+	},
+    {
+        path : 'users',
+        name : 'createUser',
+        component : CreateItem
+    }
 ];
 const router = new VueRouter({ mode: 'history', routes : routes});
 new Vue(Vue.util.extend({ router },App)).$mount('#app');

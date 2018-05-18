@@ -2,9 +2,9 @@
   "name": "challenge",
   "version": "1.0.0",
   "description": "challenge with nodejs",
-  "main": "app.js",
   "scripts": {
-    "start": "node ./src/server/www.js |webpack-dev-server"
+    "start": "webpack-dev-server",
+    "start-server": "node ./src/server/www.js"
   },
   "author": "Frarrera",
   "license": "ISC",
@@ -32,6 +32,7 @@
     "http-errors": "~1.6.2",
     "morgan": "~1.9.0",
     "mysql": "^2.15.0",
-    "sequelize": "^4.37.7"
+    "sequelize": "^4.37.7",
+    "mysql2": "^1.5.3"
   }
 }
